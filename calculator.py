@@ -1,6 +1,6 @@
 total = 0
 
-file = open("contents.txt")
+file = open("contents2.txt")
 
 file_contents = file.read()
 
@@ -10,13 +10,13 @@ for line in file_lines:
     # Extract the operator and the two numbers from the Line
     line_parts = line.split()
 
-    if line_parts[0] != "calc":
+    if line_parts[1] != "calc":
         continue
  
     # Extract the operator and numbers
-    operator = line_parts[1]
-    first_number = float(line_parts[2])
-    second_number = float(line_parts[3])
+    operator = line_parts[2]
+    first_number = float(line_parts[3])
+    second_number = float(line_parts[4])
 
     if operator == "+":
         total_number = first_number + second_number
